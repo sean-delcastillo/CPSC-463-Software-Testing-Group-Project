@@ -2,9 +2,18 @@
 
 ## CPSC 463-01 13519 Software Testing
 
-Fall 2023, Professor Ning Chen
+### Fall 2023, Professor Ning Chen
 
-## Team Members, Read me
+### Group Members
+- Florentino Becerra
+- Stephanie Becerra
+- Chance Bellon
+- Katherine Chacchi-Esquivel
+- Rachel Clark
+- Sean Del Castillo
+- Kevin Delgado
+
+## Group Members, Read me
 
 There'll be three branches with the following purposes
 1. master: holds the project README
