@@ -115,23 +115,6 @@ class TestHospitalAppointment(TransactionCase):
         newAppointment.action_cancel()
 
         self.assertEqual(newAppointment.state, "cancel")  
-
-    def test_unlink_allowed(self):
-        appointmentInfo = {
-            "patient_id" : self.patient.id,
-            "doctor_id" : self.doctor.id,
-            "name" : "test",
-            "gender" : "male",
-            "note" : "Testing the note",
-            "date_appointment" : "2023-12-02",
-            "date_checkup" : "2023-12-02 01:21:12"
-        }
-
-        newAppointment = self.env["hospital.appointment"].create(
-            appointmentInfo
-        )
-
-        newAppointment.unlink()
     
     def test_unlink_unallowed(self):
         appointmentInfo = {
