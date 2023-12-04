@@ -8,7 +8,7 @@ class TestHospitalDoctor(TransactionCase):
         super(TestHospitalDoctor, cls).setUpClass()
 
         cls.doctor = cls.env["hospital.doctor"].create({
-            "name": "Carl Rennalds",
+            "doctor_name": "Carl Rennalds",
             "age": "31",
         })
 
