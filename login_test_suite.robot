@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation		Log In Test Suite
+Resource		login.resource
 Library			SeleniumLibrary
 
 *** Variables ***
-${LOGIN URL}		http://localhost:8069/web/login
 ${BROWSER}		Chrome
 
 *** Test Cases ***
@@ -25,22 +25,6 @@ Invalid Login
 	[Teardown]	Close Browser
 
 *** Keywords ***
-Open Browser to Login Page
-	Open Browser 		${LOGIN URL}	${BROWSER}
-	Title Should Be		Login | My Website
-
-Input Username
-	[Arguments]	${username}
-	Input Text	login		${username}
-
-Input Password
-	[Arguments]	${password}
-	Input Text	password		${password}
-
-Submit Credentials
-	# This is the submit button element XPath expression
-	Click Element 	//*[@class="btn btn-primary btn-block" and text()="Log in"]
-
 Discuss Page Should Be Open
 	Title Should Be 	Odoo	
 	# This is the anchor on the navbar that reads "Discuss" XPath expression
