@@ -15,6 +15,15 @@ Valid Login
 	Discuss Page Should Be Open
 	[Teardown]	Close Browser
 
+Invalid Login
+	Open Browser to Login Page
+	Input Username 	foo
+	Input Password 	bar
+	Submit Credentials
+	Login Page Should Be Open
+	Invalid Login Dialog Should Be Visible
+	[Teardown]	Close Browser
+
 *** Keywords ***
 Open Browser to Login Page
 	Open Browser 		${LOGIN URL}	${BROWSER}
@@ -37,3 +46,10 @@ Discuss Page Should Be Open
 	# This is the anchor on the navbar that reads "Discuss" XPath
 	Wait Until Element Is Visible	//html/body/header/nav/a	3
 	Element Should contain	//html/body/header/nav/a	Discuss
+
+Login Page Should Be Open
+	Title Should be		Login | My Website
+
+Invalid Login Dialog Should Be Visible
+	Wait Until Element Is Visible	//*[@class="alert alert-danger"]
+	Element Should Contain	//*[@class="alert alert-danger"]	Wrong login/password
