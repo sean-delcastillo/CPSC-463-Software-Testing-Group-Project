@@ -28,6 +28,15 @@ Delete a Patient Record
 	Go To Patient Page
 	Patient Should Not Be Listed	John Smith
 
+Delete a Nonexistent Patient Record
+	# This test will fail since Rick Deckard is not a patient
+	Go to Patient Page
+	Click Patient 	Rick Deckard
+	Delete Record
+	Confirm Deletion
+	Go to Patient Page
+	Patient Should Not Be Listed	Rick Deckard
+
 *** Keywords ***
 Login To Odoo
 	Open Browser to Login Page
