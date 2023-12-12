@@ -4,6 +4,9 @@
 
 ### Fall 2023, Professor Ning Chen
 
+#### As of 12/12/23 this project repository has been archived
+The project was completed and turned in on 12/10/23
+
 ### Group Members
 - Florentino Becerra
 - Stephanie Becerra
